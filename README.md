@@ -1,3 +1,15 @@
+#安装 LKL 一键包命令
+```
+wget --no-check-certificate https://github.com/lcyenter/openvz-/raw/master/lkl/install.sh && bash install.sh
+```
+#如何判断是否安装成功
+```
+ping 10.0.0.2
+```
+如果修改转发端口
+修改 /root/lkl/run.sh ，查找 22:9999 ，改成你想要的端口段
+修改 /root/lkl/haproxy.cfg 查找 22-9999 ，改成你想要的端口段
+重启 vps
 ## 3月16日更新的内容：
 1. 随机启动的问题在 [@Jacky Bao](https://plus.google.com/u/0/108855478531549571757/posts/DabLxwHAwGH) 的分享下顺利解决
 2. 进入uml的方式更简单，只要执行screen -x或者bash run.sh status即可
